@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <!-- <svg width="400" height="200">
+<path id="arc4" fill="none" stroke="green" stroke-width="50" />
+<path id="arc3" fill="none" stroke="red" stroke-width="50" />
+<path id="arc2" fill="none" stroke="#ffec04" stroke-width="50" />
+<path id="arc1" fill="none" stroke="#b0cc0c" stroke-width="50" />
+</svg> -->
+<style>
+    #arrow {
+        transform: translate(192px,106px) rotate(0deg);
+        transform-origin: 12px 93px;
+    }
+</style>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="none" stroke="green" stroke-width="100" d="M 300 200 A 100 100 0 0 0 270.71067811865476 129.28932188134524"></path>
+    <path fill="none" stroke="red" stroke-width="100" d="M 129.28932188134524 129.28932188134524 A 100 100 0 0 0 100 200"></path>
+    <path fill="none" stroke="#ffec04" stroke-width="100" d="M 200 100 A 100 100 0 0 0 129.28932188134524 129.28932188134524"></path>
+    <path fill="none" stroke="#b0cc0c" stroke-width="100" d="M 270.71067811865476 129.28932188134524 A 100 100 0 0 0 200 100"></path>
+    <g id="arrow">
+	    <path fill="#464646" d="M13.886,84.243L2.83,83.875c0,0,3.648-70.77,3.956-74.981C7.104,4.562,7.832,0,8.528,0
+	    	c0.695,0,1.752,4.268,2.053,8.894C10.883,13.521,13.886,84.243,13.886,84.243z"/>
+	    <path fill="#464646" d="M16.721,85.475c0,4.615-3.743,8.359-8.36,8.359S0,90.09,0,85.475c0-4.62,3.743-8.363,8.36-8.363
+	    	S16.721,80.855,16.721,85.475z"/>
+	    <circle fill="#EEEEEE" cx="8.426" cy="85.471" r="2.691"/>
+	</g>
+</svg>
+<svg id="meter_needle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16.721px" height="93.834px" viewBox="0 0 16.721 93.834" enable-background="new 0 0 16.721 93.834" xml:space="preserve">
+  
+</svg>
+  <!-- <script>
+      function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+  var angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
+
+  return {
+    x: centerX + (radius * Math.cos(angleInRadians)),
+    y: centerY + (radius * Math.sin(angleInRadians))
+  };
+}
+
+function describeArc(x, y, radius, startAngle, endAngle){
+
+    var start = polarToCartesian(x, y, radius, endAngle);
+    var end = polarToCartesian(x, y, radius, startAngle);
+
+    var largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+    var d = [
+        "M", start.x, start.y, 
+        "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
+    ].join(" ");
+
+    return d;       
+}
+
+window.onload = function() {
+  document.getElementById("arc4").setAttribute("d", describeArc(200,200, 100, 45, 90));
+  document.getElementById("arc1").setAttribute("d", describeArc(200,200, 100, 0, 45));
+  document.getElementById("arc2").setAttribute("d", describeArc(200,200, 100, -45, 0));
+  document.getElementById("arc3").setAttribute("d", describeArc(200,200, 100, -90, -45));
+};
+
+  </script> -->
+</body>
+</html>
